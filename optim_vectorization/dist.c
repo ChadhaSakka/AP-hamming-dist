@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-
+#include <omp.h>
 //Defining error codes
 #define ERR_FNAME_NULL   0
 #define ERR_MALLOC_NULL  1
@@ -146,7 +146,7 @@ u64 hamming(u8 *a, u8 *b, u64 n)
   //
   u64 h = 0;
 
-  #pragma omp parallel
+  #pragma omp parallel for
   for (u64 i = 0; i < n; i++)
     h += __builtin_popcount(a[i] ^ b[i]);
 
