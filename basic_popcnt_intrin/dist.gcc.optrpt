@@ -1,0 +1,96 @@
+dist.c:53:3: optimized:   Inlining printf/15 into error/5700 (always_inline).
+dist.c:109:23: optimized:   Inlining fread/21 into load_seq/5701 (always_inline).
+dist.c:152:10: optimized:   Inlining _mm_popcnt_u32/140 into hamming/5703 (always_inline).
+dist.c:200:3: optimized:   Inlining printf/15 into main/5704 (always_inline).
+dist.c:199:3: optimized:   Inlining printf/15 into main/5704 (always_inline).
+dist.c:179:12: optimized:   Inlining printf/15 into main/5704 (always_inline).
+dist.c:163:12: optimized:   Inlining printf/15 into main/5704 (always_inline).
+dist.c:204:3: note: Considering inline candidate release_seq/5702.
+dist.c:204:3: optimized:  Inlining release_seq/5702 into main/5704.
+dist.c:203:3: note: Considering inline candidate release_seq/5702.
+dist.c:203:3: optimized:  Inlining release_seq/5702 into main/5704.
+dist.c:191:6: note: Considering inline candidate hamming/5703.
+dist.c:191:6: optimized:  Inlining hamming/5703 into main/5704.
+dist.c:175:5: note: Considering inline candidate error/5700.
+dist.c:175:5: missed:   will not early inline: main/5704->error/5700, call is cold and code would grow by 9
+dist.c:172:15: note: Considering inline candidate load_seq/5701.
+dist.c:172:15: missed:   will not early inline: main/5704->load_seq/5701, growth 62 exceeds --param early-inlining-insns
+dist.c:169:5: note: Considering inline candidate error/5700.
+dist.c:169:5: missed:   will not early inline: main/5704->error/5700, call is cold and code would grow by 9
+dist.c:166:15: note: Considering inline candidate load_seq/5701.
+dist.c:166:15: missed:   will not early inline: main/5704->load_seq/5701, growth 62 exceeds --param early-inlining-insns
+dist.c:204:20: missed:   not inlinable: main/5704 -> free/5716, function body not available
+dist.c:133:2: missed:   not inlinable: main/5704 -> free/5716, function body not available
+dist.c:203:20: missed:   not inlinable: main/5704 -> free/5716, function body not available
+dist.c:133:2: missed:   not inlinable: main/5704 -> free/5716, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/5704 -> __printf_chk/5706, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/5704 -> __printf_chk/5706, function body not available
+dist.c:193:7: missed:   not inlinable: main/5704 -> clock_gettime/5718, function body not available
+/usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:37:10: missed:   not inlinable: main/5704 -> __builtin_popcount/5717, function body not available
+dist.c:188:7: missed:   not inlinable: main/5704 -> clock_gettime/5718, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/5704 -> __printf_chk/5706, function body not available
+dist.c:175:5: missed:   not inlinable: main/5704 -> error/5700, call is unlikely and code size would grow
+dist.c:172:15: missed:   not inlinable: main/5704 -> load_seq/5701, --param max-inline-insns-auto limit reached
+dist.c:169:5: missed:   not inlinable: main/5704 -> error/5700, call is unlikely and code size would grow
+dist.c:166:15: missed:   not inlinable: main/5704 -> load_seq/5701, --param max-inline-insns-auto limit reached
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/5704 -> __printf_chk/5706, function body not available
+/usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:37:10: missed:   not inlinable: hamming/5703 -> __builtin_popcount/5717, function body not available
+dist.c:133:2: missed:   not inlinable: release_seq/5702 -> free/5716, function body not available
+dist.c:112:3: missed:   not inlinable: load_seq/5701 -> fclose/5710, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:296:10: missed:   not inlinable: load_seq/5701 -> __fread_chk/5715, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:295:12: missed:   not inlinable: load_seq/5701 -> __fread_chk_warn/5714, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:293:12: missed:   not inlinable: load_seq/5701 -> __fread_alias/5713, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:292:7: missed:   not inlinable: load_seq/5701 -> __builtin_constant_p/5712, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:291:15: missed:   not inlinable: load_seq/5701 -> __builtin_object_size/5711, function body not available
+dist.c:100:14: missed:   not inlinable: load_seq/5701 -> fopen/5709, function body not available
+dist.c:91:14: missed:   not inlinable: load_seq/5701 -> malloc/5708, function body not available
+dist.c:79:14: missed:   not inlinable: load_seq/5701 -> malloc/5708, function body not available
+dist.c:72:7: missed:   not inlinable: load_seq/5701 -> stat/5707, function body not available
+dist.c:56:3: missed:   not inlinable: error/5700 -> exit/5705, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: error/5700 -> __printf_chk/5706, function body not available
+Unit growth for small function inlining: 190->190 (0%)
+
+Inlined 10 calls, eliminated 0 functions
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Error (%llu): %s\n", err_id.0_1, _2);
+dist.c:56:3: missed: statement clobbers memory: exit (-1);
+dist.c:56:3: note: ***** Analysis failed with vector mode V4DI
+dist.c:56:3: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:72:7: missed: statement clobbers memory: _1 = stat (fname_10(D), &sb);
+dist.c:79:14: missed: statement clobbers memory: s_14 = malloc (16);
+dist.c:91:14: missed: statement clobbers memory: _4 = malloc (_3);
+dist.c:100:14: missed: statement clobbers memory: fp_19 = fopen (fname_10(D), "rb");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:293:12: missed: statement clobbers memory: _32 = __fread_alias (_6, 1, _5, fp_19);
+dist.c:112:3: missed: statement clobbers memory: fclose (fp_19);
+dist.c:60:8: note: ***** Analysis failed with vector mode V4DI
+dist.c:60:8: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:133:2: missed: statement clobbers memory: free (_1);
+dist.c:142:1: note: ***** Analysis failed with vector mode V4DI
+dist.c:142:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:151:21: missed: couldn't vectorize loop
+dist.c:152:10: missed: not vectorized: relevant stmt not supported: _6 = (unsigned int) _5;
+dist.c:145:5: note: vectorized 0 loops in function.
+dist.c:155:10: note: ***** Analysis failed with vector mode V32QI
+dist.c:155:10: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V32QI
+dist.c:197:18: missed: couldn't vectorize loop
+dist.c:197:18: missed: not vectorized: multiple nested loops.
+dist.c:190:25: missed: couldn't vectorize loop
+dist.c:190:25: missed: not vectorized: control flow in loop.
+dist.c:151:21: missed: couldn't vectorize loop
+dist.c:152:10: missed: not vectorized: relevant stmt not supported: _43 = (unsigned int) _42;
+dist.c:159:5: note: vectorized 0 loops in function.
+dist.c:166:15: missed: statement clobbers memory: s1_24 = load_seq (_2);
+dist.c:172:15: missed: statement clobbers memory: s2_27 = load_seq (_3);
+dist.c:188:7: missed: statement clobbers memory: clock_gettime (4, &t1);
+dist.c:193:7: missed: statement clobbers memory: clock_gettime (4, &t2);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "hamming distance: %llu\n", h_79);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "elapsed (ns)    : %.3lf\n", elapsed_78);
+dist.c:133:2: missed: statement clobbers memory: free (_50);
+dist.c:203:20: missed: statement clobbers memory: free (s1_24);
+dist.c:133:2: missed: statement clobbers memory: free (_49);
+dist.c:204:20: missed: statement clobbers memory: free (s2_27);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Error: sequences must match in length");
+dist.c:169:5: missed: statement clobbers memory: error ();
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Usage: %s [seq1] [seq2]\n", _1);
+dist.c:159:5: note: ***** Analysis failed with vector mode V4DI
+dist.c:159:5: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
