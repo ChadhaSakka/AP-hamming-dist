@@ -1,0 +1,124 @@
+dist.c:50:3: optimized:   Inlining printf/15 into error/53 (always_inline).
+dist.c:106:23: optimized:   Inlining fread/21 into load_seq/54 (always_inline).
+dist.c:244:3: optimized:   Inlining printf/15 into main/59 (always_inline).
+dist.c:243:3: optimized:   Inlining printf/15 into main/59 (always_inline).
+dist.c:222:12: optimized:   Inlining printf/15 into main/59 (always_inline).
+dist.c:206:12: optimized:   Inlining printf/15 into main/59 (always_inline).
+dist.c:248:3: note: Considering inline candidate release_seq/55.
+dist.c:248:3: optimized:  Inlining release_seq/55 into main/59.
+dist.c:247:3: note: Considering inline candidate release_seq/55.
+dist.c:247:3: optimized:  Inlining release_seq/55 into main/59.
+dist.c:235:6: note: Considering inline candidate hamming_unroll8/58.
+dist.c:235:6: missed:   will not early inline: main/59->hamming_unroll8/58, call is cold and code would grow at least by 71
+dist.c:218:5: note: Considering inline candidate error/53.
+dist.c:218:5: missed:   will not early inline: main/59->error/53, call is cold and code would grow by 9
+dist.c:215:15: note: Considering inline candidate load_seq/54.
+dist.c:215:15: missed:   will not early inline: main/59->load_seq/54, growth 64 exceeds --param early-inlining-insns
+dist.c:212:5: note: Considering inline candidate error/53.
+dist.c:212:5: missed:   will not early inline: main/59->error/53, call is cold and code would grow by 9
+dist.c:209:15: note: Considering inline candidate load_seq/54.
+dist.c:209:15: missed:   will not early inline: main/59->load_seq/54, growth 64 exceeds --param early-inlining-insns
+dist.c:248:20: missed:   not inlinable: main/59 -> free/71, function body not available
+dist.c:130:2: missed:   not inlinable: main/59 -> free/71, function body not available
+dist.c:247:20: missed:   not inlinable: main/59 -> free/71, function body not available
+dist.c:130:2: missed:   not inlinable: main/59 -> free/71, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/59 -> __printf_chk/61, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/59 -> __printf_chk/61, function body not available
+dist.c:237:7: missed:   not inlinable: main/59 -> clock_gettime/73, function body not available
+dist.c:235:6: missed:   not inlinable: main/59 -> hamming_unroll8/58, --param max-inline-insns-auto limit reached
+dist.c:231:7: missed:   not inlinable: main/59 -> clock_gettime/73, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/59 -> __printf_chk/61, function body not available
+dist.c:218:5: missed:   not inlinable: main/59 -> error/53, call is unlikely and code size would grow
+dist.c:215:15: missed:   not inlinable: main/59 -> load_seq/54, --param max-inline-insns-auto limit reached
+dist.c:212:5: missed:   not inlinable: main/59 -> error/53, call is unlikely and code size would grow
+dist.c:209:15: missed:   not inlinable: main/59 -> load_seq/54, --param max-inline-insns-auto limit reached
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/59 -> __printf_chk/61, function body not available
+dist.c:195:12: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:190:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:189:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:188:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:187:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:186:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:185:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:184:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:183:14: missed:   not inlinable: hamming_unroll8/58 -> __builtin_popcount/72, function body not available
+dist.c:171:12: missed:   not inlinable: hamming_unroll4/57 -> __builtin_popcount/72, function body not available
+dist.c:167:14: missed:   not inlinable: hamming_unroll4/57 -> __builtin_popcount/72, function body not available
+dist.c:166:14: missed:   not inlinable: hamming_unroll4/57 -> __builtin_popcount/72, function body not available
+dist.c:165:14: missed:   not inlinable: hamming_unroll4/57 -> __builtin_popcount/72, function body not available
+dist.c:164:14: missed:   not inlinable: hamming_unroll4/57 -> __builtin_popcount/72, function body not available
+dist.c:150:10: missed:   not inlinable: hamming/56 -> __builtin_popcount/72, function body not available
+dist.c:130:2: missed:   not inlinable: release_seq/55 -> free/71, function body not available
+dist.c:109:3: missed:   not inlinable: load_seq/54 -> fclose/65, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:296:10: missed:   not inlinable: load_seq/54 -> __fread_chk/70, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:295:12: missed:   not inlinable: load_seq/54 -> __fread_chk_warn/69, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:293:12: missed:   not inlinable: load_seq/54 -> __fread_alias/68, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:292:7: missed:   not inlinable: load_seq/54 -> __builtin_constant_p/67, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:291:15: missed:   not inlinable: load_seq/54 -> __builtin_object_size/66, function body not available
+dist.c:97:14: missed:   not inlinable: load_seq/54 -> fopen/64, function body not available
+dist.c:88:14: missed:   not inlinable: load_seq/54 -> aligned_alloc/63, function body not available
+dist.c:75:14: missed:   not inlinable: load_seq/54 -> aligned_alloc/63, function body not available
+dist.c:67:7: missed:   not inlinable: load_seq/54 -> stat/62, function body not available
+dist.c:52:3: missed:   not inlinable: error/53 -> exit/60, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: error/53 -> __printf_chk/61, function body not available
+Unit growth for small function inlining: 315->315 (0%)
+
+Inlined 8 calls, eliminated 0 functions
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Error (%llu): %s\n", err_id.0_1, _2);
+dist.c:52:3: missed: statement clobbers memory: exit (-1);
+dist.c:52:3: note: ***** Analysis failed with vector mode V4DI
+dist.c:52:3: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:67:7: missed: statement clobbers memory: _1 = stat (fname_10(D), &sb);
+dist.c:75:14: missed: statement clobbers memory: s_14 = aligned_alloc (64, 16);
+dist.c:88:14: missed: statement clobbers memory: _4 = aligned_alloc (64, _3);
+dist.c:97:14: missed: statement clobbers memory: fp_19 = fopen (fname_10(D), "rb");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:293:12: missed: statement clobbers memory: _32 = __fread_alias (_6, 1, _5, fp_19);
+dist.c:109:3: missed: statement clobbers memory: fclose (fp_19);
+dist.c:56:8: note: ***** Analysis failed with vector mode V4DI
+dist.c:56:8: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:130:2: missed: statement clobbers memory: free (_1);
+dist.c:139:1: note: ***** Analysis failed with vector mode V4DI
+dist.c:139:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:149:21: missed: couldn't vectorize loop
+dist.c:150:10: missed: not vectorized: relevant stmt not supported: _6 = (unsigned int) _5;
+dist.c:142:5: note: vectorized 0 loops in function.
+dist.c:153:10: note: ***** Analysis failed with vector mode V32QI
+dist.c:153:10: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V32QI
+dist.c:170:33: missed: couldn't vectorize loop
+dist.c:171:12: missed: not vectorized: relevant stmt not supported: _43 = (unsigned int) _42;
+dist.c:162:21: missed: couldn't vectorize loop
+dist.c:164:34: missed: not vectorized: relevant stmt not supported: _2 = *_1;
+dist.c:156:5: note: vectorized 0 loops in function.
+dist.c:173:10: note: ***** Analysis failed with vector mode V32QI
+dist.c:173:10: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V32QI
+dist.c:162:21: missed: missed loop optimization: niters analysis ends up with assumptions.
+dist.c:194:33: missed: couldn't vectorize loop
+dist.c:195:12: missed: not vectorized: relevant stmt not supported: _79 = (unsigned int) _78;
+dist.c:181:21: missed: couldn't vectorize loop
+dist.c:183:34: missed: not vectorized: relevant stmt not supported: _2 = *_1;
+dist.c:175:5: note: vectorized 0 loops in function.
+dist.c:197:10: note: ***** Analysis failed with vector mode V32QI
+dist.c:197:10: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V32QI
+dist.c:181:21: missed: missed loop optimization: niters analysis ends up with assumptions.
+dist.c:233:25: optimized: loop with 3 iterations completely unrolled (header execution count 268435456)
+dist.c:241:18: missed: couldn't vectorize loop
+dist.c:241:18: missed: not vectorized: number of iterations cannot be computed.
+dist.c:202:5: note: vectorized 0 loops in function.
+dist.c:231:7: missed: statement clobbers memory: clock_gettime (4, &t1);
+dist.c:209:15: missed: statement clobbers memory: s1_24 = load_seq (_2);
+dist.c:215:15: missed: statement clobbers memory: s2_27 = load_seq (_3);
+dist.c:231:7: missed: statement clobbers memory: clock_gettime (4, &t1);
+dist.c:235:6: missed: statement clobbers memory: h_54 = hamming_unroll8 (_53, _25, _28);
+dist.c:237:7: missed: statement clobbers memory: clock_gettime (4, &t2);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "hamming distance: %llu\n", h_13);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "elapsed (ns)    : %.3lf\n", elapsed_15);
+dist.c:130:2: missed: statement clobbers memory: free (_39);
+dist.c:247:20: missed: statement clobbers memory: free (s1_24);
+dist.c:130:2: missed: statement clobbers memory: free (_38);
+dist.c:248:20: missed: statement clobbers memory: free (s2_27);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Error: sequences must match in length");
+dist.c:212:5: missed: statement clobbers memory: error ();
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Usage: %s [seq1] [seq2]\n", _1);
+dist.c:202:5: note: ***** Analysis failed with vector mode V4DI
+dist.c:202:5: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
