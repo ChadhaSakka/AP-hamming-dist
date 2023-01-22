@@ -1,0 +1,160 @@
+dist.c:52:3: optimized:   Inlining printf/15 into error/41 (always_inline).
+dist.c:108:23: optimized:   Inlining fread/21 into load_seq/42 (always_inline).
+dist.c:199:3: optimized:   Inlining printf/15 into main/45 (always_inline).
+dist.c:198:3: optimized:   Inlining printf/15 into main/45 (always_inline).
+dist.c:178:12: optimized:   Inlining printf/15 into main/45 (always_inline).
+dist.c:162:12: optimized:   Inlining printf/15 into main/45 (always_inline).
+dist.c:203:3: note: Considering inline candidate release_seq/43.
+dist.c:203:3: optimized:  Inlining release_seq/43 into main/45.
+dist.c:202:3: note: Considering inline candidate release_seq/43.
+dist.c:202:3: optimized:  Inlining release_seq/43 into main/45.
+dist.c:190:6: note: Considering inline candidate hamming/44.
+dist.c:190:6: optimized:  Inlining hamming/44 into main/45.
+dist.c:174:5: note: Considering inline candidate error/41.
+dist.c:174:5: missed:   will not early inline: main/45->error/41, call is cold and code would grow by 9
+dist.c:171:15: note: Considering inline candidate load_seq/42.
+dist.c:171:15: missed:   will not early inline: main/45->load_seq/42, growth 62 exceeds --param early-inlining-insns
+dist.c:168:5: note: Considering inline candidate error/41.
+dist.c:168:5: missed:   will not early inline: main/45->error/41, call is cold and code would grow by 9
+dist.c:165:15: note: Considering inline candidate load_seq/42.
+dist.c:165:15: missed:   will not early inline: main/45->load_seq/42, growth 62 exceeds --param early-inlining-insns
+dist.c:151:10: missed:   not inlinable: hamming._omp_fn.0/58 -> __builtin_popcount/59, function body not available
+dist.c:203:20: missed:   not inlinable: main/45 -> free/57, function body not available
+dist.c:132:2: missed:   not inlinable: main/45 -> free/57, function body not available
+dist.c:202:20: missed:   not inlinable: main/45 -> free/57, function body not available
+dist.c:132:2: missed:   not inlinable: main/45 -> free/57, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/45 -> __printf_chk/47, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/45 -> __printf_chk/47, function body not available
+dist.c:192:7: missed:   not inlinable: main/45 -> clock_gettime/61, function body not available
+missed:   not inlinable: main/45 -> __builtin_GOMP_parallel/60, function body not available
+dist.c:187:7: missed:   not inlinable: main/45 -> clock_gettime/61, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/45 -> __printf_chk/47, function body not available
+dist.c:174:5: missed:   not inlinable: main/45 -> error/41, call is unlikely and code size would grow
+dist.c:171:15: missed:   not inlinable: main/45 -> load_seq/42, --param max-inline-insns-auto limit reached
+dist.c:168:5: missed:   not inlinable: main/45 -> error/41, call is unlikely and code size would grow
+dist.c:165:15: missed:   not inlinable: main/45 -> load_seq/42, --param max-inline-insns-auto limit reached
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/45 -> __printf_chk/47, function body not available
+missed:   not inlinable: hamming/44 -> __builtin_GOMP_parallel/60, function body not available
+dist.c:132:2: missed:   not inlinable: release_seq/43 -> free/57, function body not available
+dist.c:111:3: missed:   not inlinable: load_seq/42 -> fclose/51, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:296:10: missed:   not inlinable: load_seq/42 -> __fread_chk/56, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:295:12: missed:   not inlinable: load_seq/42 -> __fread_chk_warn/55, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:293:12: missed:   not inlinable: load_seq/42 -> __fread_alias/54, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:292:7: missed:   not inlinable: load_seq/42 -> __builtin_constant_p/53, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:291:15: missed:   not inlinable: load_seq/42 -> __builtin_object_size/52, function body not available
+dist.c:99:14: missed:   not inlinable: load_seq/42 -> fopen/50, function body not available
+dist.c:90:14: missed:   not inlinable: load_seq/42 -> malloc/49, function body not available
+dist.c:78:14: missed:   not inlinable: load_seq/42 -> malloc/49, function body not available
+dist.c:71:7: missed:   not inlinable: load_seq/42 -> stat/48, function body not available
+dist.c:55:3: missed:   not inlinable: error/41 -> exit/46, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: error/41 -> __printf_chk/47, function body not available
+Unit growth for small function inlining: 208->208 (0%)
+
+Inlined 9 calls, eliminated 0 functions
+
+dist.c:150:21: missed: couldn't vectorize loop
+dist.c:151:10: missed: not vectorized: relevant stmt not supported: _13 = (unsigned int) _12;
+dist.c:149:11: note: vectorized 0 loops in function.
+dist.c:150:21: note: ***** Analysis failed with vector mode V4DI
+dist.c:150:21: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Error (%llu): %s\n", err_id.0_1, _2);
+dist.c:55:3: missed: statement clobbers memory: exit (-1);
+dist.c:55:3: note: ***** Analysis failed with vector mode V4DI
+dist.c:55:3: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:71:7: missed: statement clobbers memory: _1 = stat (fname_10(D), &sb);
+dist.c:78:14: missed: statement clobbers memory: s_14 = malloc (16);
+dist.c:90:14: missed: statement clobbers memory: _4 = malloc (_3);
+dist.c:99:14: missed: statement clobbers memory: fp_19 = fopen (fname_10(D), "rb");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:293:12: missed: statement clobbers memory: _32 = __fread_alias (_6, 1, _5, fp_19);
+dist.c:111:3: missed: statement clobbers memory: fclose (fp_19);
+dist.c:59:8: note: ***** Analysis failed with vector mode V4DI
+dist.c:59:8: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:132:2: missed: statement clobbers memory: free (_1);
+dist.c:141:1: note: ***** Analysis failed with vector mode V4DI
+dist.c:141:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+dist.c:144:5: note: vectorized 0 loops in function.
+dist.c:144:5: missed: statement clobbers memory: __builtin_GOMP_parallel (hamming._omp_fn.0, &.omp_data_o.3, 0, 0);
+dist.c:149:11: note: ***** Analysis succeeded with vector mode V4DI
+dist.c:149:11: note: SLPing BB part
+dist.c:149:11: note: Costing subgraph: 
+dist.c:149:11: note: node 0x2699a78 (max_nunits=2, refcnt=1)
+dist.c:149:11: note: op template: .omp_data_o.3.a = a_6(D);
+dist.c:149:11: note: 	stmt 0 .omp_data_o.3.a = a_6(D);
+dist.c:149:11: note: 	stmt 1 .omp_data_o.3.b = b_4(D);
+dist.c:149:11: note: 	children 0x2699af0
+dist.c:149:11: note: node (external) 0x2699af0 (max_nunits=1, refcnt=1)
+dist.c:149:11: note: 	{ a_6(D), b_4(D) }
+dist.c:149:11: note: Cost model analysis: 
+dist.c:149:11: note: Cost model analysis for part in loop 0:
+  Vector cost: 24
+  Scalar cost: 24
+dist.c:149:11: note: Basic block will be vectorized using SLP
+dist.c:149:11: note: Vectorizing SLP tree:
+dist.c:149:11: note: node 0x2699a78 (max_nunits=2, refcnt=1)
+dist.c:149:11: note: op template: .omp_data_o.3.a = a_6(D);
+dist.c:149:11: note: 	stmt 0 .omp_data_o.3.a = a_6(D);
+dist.c:149:11: note: 	stmt 1 .omp_data_o.3.b = b_4(D);
+dist.c:149:11: note: 	children 0x2699af0
+dist.c:149:11: note: node (external) 0x2699af0 (max_nunits=1, refcnt=1)
+dist.c:149:11: note: 	{ a_6(D), b_4(D) }
+dist.c:149:11: note: ------>vectorizing SLP node starting from: .omp_data_o.3.a = a_6(D);
+dist.c:149:11: note: vect_is_simple_use: operand b_4(D), type of def: external
+dist.c:149:11: note: transform store. ncopies = 1
+dist.c:149:11: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: .omp_data_o.3.a
+dist.c:149:11: note: created &.omp_data_o.3.a
+dist.c:149:11: note: add new stmt: MEM <vector(2) long unsigned int> [(u8 * *)&.omp_data_o.3] = _14;
+dist.c:149:11: note: vectorizing stmts using SLP.
+dist.c:149:11: optimized: basic block part vectorized using 32 byte vectors
+dist.c:149:11: note: ***** The result for vector mode V32QI would be the same
+dist.c:196:18: missed: couldn't vectorize loop
+dist.c:196:18: missed: not vectorized: number of iterations cannot be computed.
+dist.c:189:25: missed: couldn't vectorize loop
+dist.c:158:5: missed: statement clobbers memory: __builtin_GOMP_parallel (hamming._omp_fn.0, &.omp_data_o.3, 0, 0);
+dist.c:158:5: note: vectorized 0 loops in function.
+dist.c:158:5: missed: statement clobbers memory: __builtin_GOMP_parallel (hamming._omp_fn.0, &.omp_data_o.3, 0, 0);
+dist.c:165:15: missed: statement clobbers memory: s1_24 = load_seq (_2);
+dist.c:171:15: missed: statement clobbers memory: s2_27 = load_seq (_3);
+dist.c:187:7: missed: statement clobbers memory: clock_gettime (4, &t1);
+dist.c:158:5: missed: statement clobbers memory: __builtin_GOMP_parallel (hamming._omp_fn.0, &.omp_data_o.3, 0, 0);
+dist.c:192:7: missed: statement clobbers memory: clock_gettime (4, &t2);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "hamming distance: %llu\n", h_13);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "elapsed (ns)    : %.3lf\n", elapsed_41);
+dist.c:132:2: missed: statement clobbers memory: free (_39);
+dist.c:202:20: missed: statement clobbers memory: free (s1_24);
+dist.c:132:2: missed: statement clobbers memory: free (_38);
+dist.c:203:20: missed: statement clobbers memory: free (s2_27);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Error: sequences must match in length");
+dist.c:168:5: missed: statement clobbers memory: error ();
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "Usage: %s [seq1] [seq2]\n", _1);
+dist.c:149:11: note: ***** Analysis succeeded with vector mode V4DI
+dist.c:149:11: note: SLPing BB part
+dist.c:149:11: note: Costing subgraph: 
+dist.c:149:11: note: node 0x2649a28 (max_nunits=2, refcnt=1)
+dist.c:149:11: note: op template: .omp_data_o.3.a = _8;
+dist.c:149:11: note: 	stmt 0 .omp_data_o.3.a = _8;
+dist.c:149:11: note: 	stmt 1 .omp_data_o.3.b = _7;
+dist.c:149:11: note: 	children 0x2649aa0
+dist.c:149:11: note: node (external) 0x2649aa0 (max_nunits=1, refcnt=1)
+dist.c:149:11: note: 	{ _8, _7 }
+dist.c:149:11: note: Cost model analysis: 
+dist.c:149:11: note: Cost model analysis for part in loop 2:
+  Vector cost: 24
+  Scalar cost: 24
+dist.c:149:11: note: Basic block will be vectorized using SLP
+dist.c:149:11: note: Vectorizing SLP tree:
+dist.c:149:11: note: node 0x2649a28 (max_nunits=2, refcnt=1)
+dist.c:149:11: note: op template: .omp_data_o.3.a = _8;
+dist.c:149:11: note: 	stmt 0 .omp_data_o.3.a = _8;
+dist.c:149:11: note: 	stmt 1 .omp_data_o.3.b = _7;
+dist.c:149:11: note: 	children 0x2649aa0
+dist.c:149:11: note: node (external) 0x2649aa0 (max_nunits=1, refcnt=1)
+dist.c:149:11: note: 	{ _8, _7 }
+dist.c:149:11: note: ------>vectorizing SLP node starting from: .omp_data_o.3.a = _8;
+dist.c:149:11: note: vect_is_simple_use: operand s2_27->bases, type of def: internal
+dist.c:149:11: note: transform store. ncopies = 1
+dist.c:149:11: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: .omp_data_o.3.a
+dist.c:149:11: note: created &.omp_data_o.3.a
+dist.c:149:11: note: add new stmt: MEM <vector(2) long unsigned int> [(u8 * *)&.omp_data_o.3] = _14;
+dist.c:149:11: note: vectorizing stmts using SLP.
+dist.c:149:11: optimized: basic block part vectorized using 32 byte vectors
+dist.c:149:11: note: ***** The result for vector mode V32QI would be the same
